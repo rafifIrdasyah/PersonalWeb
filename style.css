@@ -7,6 +7,9 @@
 
 body {
   padding-top: 10px;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .navbar {
@@ -76,10 +79,9 @@ main section
   padding: 0 50px;
 }
 
-.medsos{
-  pad
+.medsos {
+  margin-left: 20px;
 }
-
 .main h3 {
   font-size: 3rem;
   font-weight: bolder;
@@ -430,7 +432,7 @@ a.btn {
 .btn-submit {
   width: 100%;
   padding: 0.75rem 1.3rem;
-  background-color: var(--primaryIconColor);
+  background-color: rgb(73, 73, 187);
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -439,7 +441,7 @@ a.btn {
 }
 
 .btn-submit:hover {
-  background-color: var(--primaryIconColorHover);
+  background-color: rgb(73, 73, 187);
 }
 
 /* Contact Section - Right Side */
@@ -450,7 +452,7 @@ a.btn {
 }
 
 .contact-item-icon {
-  background: var(--thirdBackgroundColor);
+  background: rgb(246, 246, 247);
   /* padding: 0.8rem 1rem; */
   width: 53px;
   height: 53px;
@@ -461,7 +463,7 @@ a.btn {
 }
 
 .contact-item-icon svg {
-  fill: var(--primaryIconColor);
+  fill: black;
 }
 
 .contact-item-detail h4 {
