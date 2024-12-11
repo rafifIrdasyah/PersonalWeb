@@ -7,12 +7,13 @@
 
 body {
   padding-top: 10px;
-  max-width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  border: 2px solid red;
 }
 
 .navbar {
+  width: 100%;
   box-shadow: 1px 1px 10px;
   padding: 0px 60px;
   background-color: white;
@@ -68,12 +69,19 @@ main section
   padding: 40px 100px;
 }
 
+.container-medsos {
+  display: flex;
+}
+
 .hero {
   display: block;
   margin-left: auto;
   margin-right: auto;
   -webkit-mask-image: linear-gradient(black 70%, transparent);
+  max-width: 100%;
+  min-width: 200px;
 }
+
 .herosection {
   margin: auto;
   padding: 0 50px;
@@ -82,6 +90,7 @@ main section
 .medsos {
   margin-left: 20px;
 }
+
 .main h3 {
   font-size: 3rem;
   font-weight: bolder;
@@ -92,6 +101,7 @@ main section
   font-weight: lighter;
   letter-spacing: 5px;
 }
+
 .main h6 {
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -128,20 +138,32 @@ input.bt1:hover {
 }
 
 .skills-grid {
-  display: grid;
-  /* grid-template-columns: 40% 60%; */
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  /* display: grid;
+  
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   gap: 3rem;
+  width: 100%; */
+
+  .skills-grid max-width: 100%;
+  display: grid;
+
 }
+
 
 .education {
   display: flex;
   gap: 1rem;
+  width: 100%;
+}
+
+.skills-left {
+  width: 100%;
 }
 
 .education .line {
   padding: 0 0.7rem;
 }
+
 .education .linesma {
   padding: 0 0.7rem;
 }
@@ -165,6 +187,10 @@ a.btn {
   margin-top: 1rem;
 }
 
+.education-info {
+  width: 100%;
+}
+
 .education-info p {
   margin: 0.6rem 0 1.4rem;
 }
@@ -179,6 +205,7 @@ a.btn {
   letter-spacing: 5px;
   padding-top: 60px;
 }
+
 .education-title {
   padding: 0;
 }
@@ -187,6 +214,7 @@ a.btn {
   height: 20px;
   width: 20px;
 }
+
 /* The dot on the line */
 .education .line div:before {
   content: "";
@@ -197,6 +225,7 @@ a.btn {
   position: absolute;
   left: -6px;
 }
+
 .education .linesma div:before {
   content: "";
   width: 15px;
@@ -260,10 +289,12 @@ a.btn {
   padding-top: 3px;
   padding-left: 10px;
 }
+
 @keyframes load1 {
   0% {
     width: 0;
   }
+
   100% {
     width: 95%;
   }
@@ -281,6 +312,7 @@ a.btn {
   0% {
     width: 0;
   }
+
   100% {
     width: 90%;
   }
@@ -298,6 +330,7 @@ a.btn {
   0% {
     width: 0;
   }
+
   100% {
     width: 80%;
   }
@@ -315,6 +348,7 @@ a.btn {
   0% {
     width: 0;
   }
+
   100% {
     width: 80%;
   }
@@ -332,16 +366,19 @@ a.btn {
   0% {
     width: 0;
   }
+
   100% {
     width: 50%;
   }
 }
+
 /* section porto */
 #portfolios {
   background: rgb(255, 255, 255);
   background: linear-gradient(0deg, rgba(255, 255, 255, 1) 85%, rgba(235, 235, 249, 1) 100%);
   padding: 200px 0px 200px 0px;
 }
+
 .portfolios {
   display: flex;
   justify-content: center;
@@ -352,6 +389,7 @@ a.btn {
   margin: 20px 0;
   opacity: 0.8;
 }
+
 .smallPills {
   border: 1px solid #8b8b97;
   padding: 5px;
@@ -378,6 +416,7 @@ a.btn {
 
 .card {
   margin: 3rem;
+  width: 25rem;
 }
 
 .card-title {
@@ -387,20 +426,24 @@ a.btn {
 .btn-secondary {
   background-color: rgb(73, 73, 187);
 }
+
 /* contact */
 
 #contact {
   background: rgb(235, 235, 249);
   background: linear-gradient(0deg, rgba(235, 235, 249, 1) 90%, rgba(255, 255, 255, 1) 100%);
-  padding: 200px 200px 100px 200px;
+  padding: 200px 100px 100px 100px;
+  width: 100%;
 }
 
-.contact {
-  display: grid;
+.contact.main-container {
+  display: flex;
+  flex-wrap: wrap;
   /* grid-template-columns: 1fr 1fr; */
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 3rem;
-  margin: auto;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .contact-form div {
@@ -460,7 +503,6 @@ a.btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  awdawd
 }
 
 .contact-item-icon svg {
@@ -469,4 +511,35 @@ a.btn {
 
 .contact-item-detail h4 {
   margin-bottom: 0.6rem;
+}
+
+/* responsive */
+
+@media screen and (max-width: 476px) {
+  .main {
+    padding: 0;
+    padding-top: 100px;
+  }
+
+  .herosection {
+    padding: 0;
+  }
+
+  #skills {
+    padding: 0;
+
+  }
+
+  #contact {
+    padding: 0;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .container {
+    padding: 0;
+    padding-right: 50px;
+  }
 }
