@@ -144,7 +144,7 @@ input.bt1:hover {
   gap: 3rem;
   width: 100%; */
 
-  .skills-grid max-width: 100%;
+  max-width: 100%;
   display: grid;
 
 }
