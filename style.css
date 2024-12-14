@@ -52,7 +52,7 @@ body {
 }
 
 .container {
-  padding: 0 6rem;
+  padding: 0 !important;
 }
 
 /*
@@ -616,7 +616,7 @@ a.btn {
 
 }
 
-@media (427px < width < 769px) {
+@media (427px < width < 910px) {
   .main {
     padding: 0;
     padding-top: 100px;
