@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+
 }
 
 body {
@@ -70,6 +71,7 @@ main section
 
 .container-medsos {
   display: flex;
+  justify-content: center;
 }
 
 .hero {
@@ -133,7 +135,7 @@ input.bt1:hover {
   width: 100%;
   background: rgb(235, 235, 249);
   background: linear-gradient(0deg, rgba(235, 235, 249, 1) 90%, rgba(255, 255, 255, 1) 100%);
-  padding: 200px 200px 200px 200px;
+  padding: 200px 200px 100px 200px;
 }
 
 .skills-grid {
@@ -155,8 +157,16 @@ input.bt1:hover {
 }
 
 .skills-left {
-  width: 100%;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
+
+.skills-left h2 {
+  font-size: 25px;
+}
+
 
 .education .line {
   padding: 0 0.7rem;
@@ -195,7 +205,7 @@ a.btn {
 
 .skills h4 {
   font-weight: 200;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .pre-title {
@@ -240,6 +250,9 @@ a.btn {
   grid-template-columns: 1fr 1fr;
   margin-top: 1.5rem;
 } */
+.skills-right {
+  width: 50%;
+}
 
 .skills-right ul {
   line-height: 2rem;
@@ -294,7 +307,7 @@ a.btn {
   }
 
   100% {
-    width: 95%;
+    width: 40%;
   }
 }
 
@@ -312,7 +325,7 @@ a.btn {
   }
 
   100% {
-    width: 90%;
+    width: 40%;
   }
 }
 
@@ -330,7 +343,7 @@ a.btn {
   }
 
   100% {
-    width: 80%;
+    width: 35%;
   }
 }
 
@@ -348,7 +361,7 @@ a.btn {
   }
 
   100% {
-    width: 80%;
+    width: 30%;
   }
 }
 
@@ -366,7 +379,7 @@ a.btn {
   }
 
   100% {
-    width: 50%;
+    width: 30%;
   }
 }
 
@@ -383,18 +396,24 @@ a.btn {
 }
 
 .pills {
-  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
   margin: 20px 0;
   opacity: 0.8;
+  max-width: fit-content;
+  min-width: fit-content;
 }
 
 .smallPills {
   border: 1px solid #8b8b97;
-  padding: 5px;
+  padding: 10px;
   border-radius: 10px;
   font-weight: 400;
-  margin: 0 5px 0 0;
+  margin: 5px 5px 0 0;
+
 }
+
 
 .card-text {
   border-top: 1px solid black;
@@ -421,6 +440,7 @@ a.btn {
   font-size: 30px;
 }
 
+
 .btn-secondary {
   background-color: rgb(73, 73, 187);
 }
@@ -430,10 +450,6 @@ a.btn {
 #contact {
   background: rgb(235, 235, 249);
   background: linear-gradient(0deg, rgba(235, 235, 249, 1) 90%, rgba(255, 255, 255, 1) 100%);
-}
-
-contact-left {
-  width: 500px;
 }
 
 .contact.main-container {
@@ -450,7 +466,7 @@ contact-left {
 
 .contact-form input,
 .contact-form textarea {
-  width: 500px;
+  width: 600px;
   padding: 0.75rem 1.3rem;
   font-family: "Roboto", sans-serif;
   background: #ebebf9;
@@ -513,10 +529,12 @@ contact-left {
 
 /* responsive */
 
-@media screen and (max-width: 476px) {
+@media (319px < width < 426px) {
   .main {
     padding: 0;
     padding-top: 100px;
+    justify-content: center;
+    text-align: center;
   }
 
   .skills-grid {
@@ -527,6 +545,10 @@ contact-left {
 
   .herosection {
     padding: 0;
+  }
+
+  .hero {
+    margin-top: 3rem;
   }
 
   #skills {
@@ -542,7 +564,7 @@ contact-left {
 
   .card {
     width: 90%;
-    margin: 0;
+    margin-top: 1vh;
   }
 
   .container {
@@ -582,4 +604,100 @@ contact-left {
     margin: 0 auto;
   }
 
+  .skills-left {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .skills-right {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+}
+
+@media (427px < width < 769px) {
+  .main {
+    padding: 0;
+    padding-top: 100px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .skills-grid {
+    display: grid;
+    width: 90%;
+    margin: auto;
+  }
+
+  .herosection {
+    padding: 0;
+  }
+
+  .hero {
+    margin-top: 3rem;
+  }
+
+  #skills {
+    padding: 0;
+
+  }
+
+  #contact {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin-top: 1vh;
+  }
+
+  .container {
+    padding: 0;
+    padding-right: 50px;
+  }
+
+  .contact.main-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pre-title {
+    font-weight: 100;
+    letter-spacing: 5px;
+    padding-top: 60px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .portfolios {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .skills-left {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .skills-right {
+    margin: 0 auto;
+    width: 100%;
+  }
 }
