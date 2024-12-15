@@ -71,7 +71,6 @@ main section
 
 .container-medsos {
   display: flex;
-  justify-content: center;
 }
 
 .hero {
@@ -614,6 +613,13 @@ a.btn {
     width: 100%;
   }
 
+  .container-medsos {
+    display: block;
+  }
+
+  .logo-medsos {
+    margin-top: 20px;
+  }
 }
 
 @media (427px < width < 910px) {
@@ -699,5 +705,19 @@ a.btn {
   .skills-right {
     margin: 0 auto;
     width: 100%;
+  }
+
+  .container-medsos {
+    display: flex;
+    justify-content: center;
+  }
+
+  .medsos {
+    padding-top: 10px;
+  }
+
+  .logo-medsos {
+    padding-top: 10px;
+    padding-left: 5px;
   }
 }
